@@ -3,6 +3,33 @@ import imagesLoaded from "https://esm.sh/imagesloaded";
 console.clear();
 
 // -------------------------------------------------
+// ------------------ Nav Bar-----------------------
+// -------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const s2 = document.querySelector(".s2");
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.classList.add("active");
+            } else {
+                header.classList.remove("active");
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(s2);
+});
+
+
+// -------------------------------------------------
 // ------------------ Utilities --------------------
 // -------------------------------------------------
 
