@@ -1,0 +1,359 @@
+@import url("https://api.fontshare.com/v2/css?f[]=archivo@100,200,300,400,500,600,700,800,900&f[]=clash-display@200,300,400,500,600,700&display=swap");
+
+:root {
+	--bg-color: #313338;
+	--bg-sec: #43444B;
+	--primary-color: #7289da;
+	--highlight-color: #F5FCEC;
+	--downlight-color: #80848E;
+
+	--font-archivo: "Archivo", sans-serif;
+	--font-clash-display: "Clash Display", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    background: var(--bg-color);
+}
+
+/* ------------------------------------------------ */
+/* -------------------- NAVBAR --------------------- */
+/* ------------------------------------------------ */
+
+header{
+	position: fixed;
+	width: 100%;
+	display: flex;
+    justify-content: space-around;
+    z-index: 100;
+	padding: 15px;
+}
+
+.navbar {
+	height: auto;
+    width: 100%;
+    display: flex;
+	align-items: center;
+    justify-content: space-around;
+	position: relative;
+	padding: 10px;
+	font-family: var(--font-archivo);
+}
+
+.navbar a {
+    color: var(--downlight-color);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+}
+
+.navbar img {
+	width: 40px;
+	height: 40px;
+}
+/* ------------------------------------------------ */
+/* -------------------- FOOTER -------------------- */
+/* ------------------------------------------------ */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden; /* Evita el desbordamiento */
+    padding: 40px 0;
+    color: var(--highlight-color);
+}
+
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    text-align: center;
+	width: 100%;
+    margin-bottom: 20px;
+	justify-content: space-around;
+}
+
+.text-footer{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.text-footer2{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.footer-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: var(--font-clash-display) !important;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    color: var(--downlight-color) !important;
+	font-family: var(--font-archivo) !important;
+	text-align: justify;
+	width: 80%;
+	margin-right: 5rem;
+}
+
+.footer-button {
+    text-align: center;
+}
+
+.footer-button button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+	width: auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	font-family: var(--font-clash-display);
+}
+
+.footer-button button:hover {
+    background-color:#F5FCEC;
+	color: var(--bg-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+	left: 25%;
+	right: 25%;
+	font-family: var(--font-archivo);
+	width: 100%;
+}
+
+.copyright {
+    font-size: 0.9rem;
+	width: 80%;
+}
+
+.copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright a:hover {
+    color: #F5FCEC;
+}
+
+.icons{
+	display: flex;
+	justify-content: center;
+	width: 20%;
+}
+
+.social-icons {
+    display: flex;
+	align-items: center;
+    gap: 15px;
+    padding-left: 2rem;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #F5FCEC;
+}
+
+/* ------------------------------------------------ */
+/* -------------------- LOADER --------------------- */
+/* ------------------------------------------------ */
+
+.loader {
+	position: fixed;
+	inset: 0;
+
+	display: grid;
+	place-items: center;
+
+	background: #000;
+	z-index: 1000;
+
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+
+	.loader__text {
+		font-family: var(--font-clash-display);
+		font-size: clamp(2rem, 2vw, 5rem);
+		font-weight: 800;
+		color: #fff;
+	}
+}
+
+/* ------------------------------------------------ */
+/* -------------------- CHATBOT ------------------- */
+/* ------------------------------------------------ */
+
+#chat-bot {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  height: auto;
+  width: auto;
+  float: right;
+}
+#chat-bot .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  background: var(--bg-sec);
+  float: right;
+  border-radius: 10px;
+  transition: 0.3s all;
+  width: 2rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  overflow: hidden;
+}
+#chat-bot .icon:hover {
+  box-shadow: 0 3px 8px var(--downlight-color);
+}
+#chat-bot .icon .user {
+  visibility: hidden;
+  margin-left: -100px;
+}
+#chat-bot .icon.expanded {
+  width: 18rem;
+  justify-content: space-between;
+}
+#chat-bot .messenger.expanded {
+  visibility: visible;
+  height: 25rem;
+  width: 18.7rem;
+}
+#chat-bot .icon.expanded .user {
+  visibility: visible;
+  margin-left: 0;
+  transition: 0.5s;
+}
+
+#chat-bot .messenger {
+  background-color: #fff;
+  border: 1px solid #0f513238;
+  box-shadow: 0 30px 50px #0000000d;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 390px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.7s;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+#chat-bot .chatroom {
+  height: 290px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  touch-action: pan-y;
+}
+#chat-bot .chatroom::-webkit-scrollbar {
+  display: none;
+}
+#chat-bot .type-area input.typing {
+  width: 100%;
+  outline: none !important;
+  border: 1px solid rgb(227 230 234);
+  border-radius: 5px;
+  padding: 8px 40px 8px 14px;
+  height: 40px;
+  font-size: 12px;
+}
+#chat-bot .type-area {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgb(0 0 0 / 3%);
+  margin-top: 10px;
+}
+#chat-bot .type-area span.send {
+  position: absolute;
+  right: 14px;
+  top: 9px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#chat-bot .msg {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #7c8089;
+}
+#chat-bot .msg .bubble {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e0f2ff;
+}
+#chat-bot .msg.msg-right .bubble {
+  color: rgb(15 81 50);
+  background-color: rgb(209 231 221);
+}
+#chat-bot .msg .bubble .name {
+  color: #393d4a;
+  font-size: 12px;
+  font-weight: 500;
+}
+.msg.msg-left {
+  align-items: flex-start;
+}
+.msg.msg-right {
+  align-items: flex-end;
+}
+#chat-bot .timestamp {
+  font-size: 12px;
+  color: #7c8089;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* chat-bot	 end */

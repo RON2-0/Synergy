@@ -1,60 +1,20 @@
+// -------------------------------------------------
+// ------------------ CHATBOT ----------------------
+// -------------------------------------------------
+
+const chat_btn = $("#chat-bot .icon");
+const chat_box = $("#chat-bot .messenger");
+
+chat_btn.click(() => {
+  chat_btn.toggleClass("expanded");
+  setTimeout(() => {
+    chat_box.toggleClass("expanded");
+  }, 100);
+});
+
 import imagesLoaded from "https://esm.sh/imagesloaded";
 
 console.clear();
-
-// -------------------------------------------------
-// ------------------ FOOTER -----------------------
-// -------------------------------------------------
-
-document.addEventListener("DOMContentLoaded", () => {
-    const footer = document.querySelector("footer");
-    const s4 = document.querySelector(".s4");
-
-    const observerOptions = {
-        root: null,
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                footer.classList.add("active");
-            } else {
-                footer.classList.remove("active");
-            }
-        });
-    }, observerOptions);
-
-    observer.observe(s4);
-});
-
-
-// -------------------------------------------------
-// ------------------ Nav Bar-----------------------
-// -------------------------------------------------
-
-document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector("header");
-    const s2 = document.querySelector(".s2");
-
-    const observerOptions = {
-        root: null,
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                header.classList.add("active");
-            } else {
-                header.classList.remove("active");
-            }
-        });
-    }, observerOptions);
-
-    observer.observe(s2);
-});
-
 
 // -------------------------------------------------
 // ------------------ Utilities --------------------
