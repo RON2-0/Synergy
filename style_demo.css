@@ -28,6 +28,24 @@ body{
     background: var(--bg-color);
 }
 
+/* Personalizar la barra de desplazamiento */
+/* Barra de Scroll */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+margin: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
 /* ------------------------------------------------ */
 /* -------------------- NAVBAR --------------------- */
 /* ------------------------------------------------ */
@@ -255,9 +273,7 @@ footer{
   padding-right: 1.5rem;
   overflow: hidden;
 }
-#chat-bot .icon:hover {
-  box-shadow: 0 3px 8px var(--downlight-color);
-}
+
 #chat-bot .icon .user {
   visibility: hidden;
   margin-left: -100px;
@@ -265,16 +281,25 @@ footer{
 #chat-bot .icon.expanded {
   width: 18rem;
   justify-content: space-between;
+  align-items: center;
 }
 #chat-bot .messenger.expanded {
   visibility: visible;
   height: 25rem;
   width: 18.7rem;
+  font-family: var(--font-archivo);
 }
 #chat-bot .icon.expanded .user {
   visibility: visible;
   margin-left: 0;
   transition: 0.5s;
+  font-family: var(--font-clash-display);
+  font-weight: bold;
+}
+
+.user i{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #chat-bot .messenger {
@@ -302,7 +327,7 @@ footer{
   display: none;
 }
 #chat-bot .type-area input.typing {
-  width: 100%;
+  width: 80%;
   outline: none !important;
   border: 1px solid rgb(227 230 234);
   border-radius: 5px;
@@ -319,9 +344,10 @@ footer{
 #chat-bot .type-area span.send {
   position: absolute;
   right: 14px;
-  top: 9px;
+  top: 16px;
   cursor: pointer;
   font-size: 18px;
+  margin-right: 0.5rem;
 }
 #chat-bot .msg {
   margin-bottom: 15px;

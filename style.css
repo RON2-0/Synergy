@@ -33,10 +33,22 @@ body{
 }
 
 /* Personalizar la barra de desplazamiento */
+/* Barra de Scroll */
+
 ::-webkit-scrollbar {
-    display: none;
+    width: 0.5rem;
+	
 }
 
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+	margin: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
 
 main {
 	overflow-y: scroll;
@@ -72,7 +84,7 @@ section {
 }
 
 .s3{
-	height: 100vh;
+	height: auto;
 	width: auto;
 	display: flex;
 	justify-content: center;
@@ -658,6 +670,7 @@ footer.active {
 	top: 15px; 
 	left: 15px; 
 	z-index: 100;
+	margin-left: 0.5rem;
 }
 
 .logo_container img {
@@ -690,15 +703,15 @@ footer.active {
 	justify-content: right;
 	align-items: center;
 	padding-right: 5%;
-	padding-top: 5%;
 	width: 100%;
+	text-align: justify;
 }
 
 .mascot{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 20%;
+	width: auto;
 	padding-top: 6%;
 }
 
@@ -713,7 +726,9 @@ footer.active {
 	align-items: center;
 	width: auto;
 	padding-left: 5%;
+	padding-top: 2.5%;
 	width: 100%;
+	text-align: justify;
 }
 
 .mision h1, .vision h1 {
@@ -744,8 +759,7 @@ padding: 5%;
 	border-radius: 15px;
 }
 
-.canva h1{
-	padding-bottom: 5%;
-	font-family: var(--font-clash-display);
-	color: var(--highlight-color);
+.canvacan{
+	margin-top: 0;
+	padding-top: 0;
 }
